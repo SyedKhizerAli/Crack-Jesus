@@ -1,0 +1,319 @@
+.card-detail-table-container {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.card-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.card-detail-header h2 {
+  margin: 0;
+  font-size: var(--font-size-large);
+  color: var(--color-white);
+}
+
+.card-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.card-detail-table-wrapper {
+  overflow-x: auto;
+  padding: var(--spacing-lg);
+}
+
+.card-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.card-detail-table thead {
+  background-color: var(--color-gray);
+}
+
+.card-detail-table th {
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-accent);
+  white-space: nowrap;
+  font-size: var(--font-size-small);
+}
+
+.card-detail-table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray);
+  vertical-align: middle;
+  font-size: var(--font-size-small);
+}
+
+.card-detail-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.card-detail-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Card type styling */
+.card-type-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.card-brand {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.card-category {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+/* Seller info styling */
+.seller-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.seller-name {
+  font-weight: 500;
+}
+
+.verified-badge {
+  background-color: rgba(3, 218, 198, 0.2);
+  color: var(--color-success);
+  padding: 2px 6px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+/* Price and stock styling */
+.price {
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: var(--font-size-medium);
+}
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+
+.stock-label {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+.stock-value {
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-small);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sm:hover {
+  transform: translateY(-1px);
+}
+
+.btn-sm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-available {
+  background-color: rgba(3, 218, 198, 0.2);
+  color: var(--color-success);
+}
+
+.status-pending {
+  background-color: rgba(255, 213, 79, 0.2);
+  color: #ffd54f;
+}
+
+.status-sold {
+  background-color: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+}
+
+.status-hidden {
+  background-color: rgba(158, 158, 158, 0.2);
+  color: #9e9e9e;
+}
+
+.status-rejected {
+  background-color: rgba(207, 102, 121, 0.2);
+  color: var(--color-error);
+}
+
+/* Description section */
+.card-description-section {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray);
+}
+
+.card-description-section h3 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-medium);
+}
+
+.card-description-section p {
+  color: var(--color-light-gray);
+  line-height: 1.6;
+}
+
+/* Metadata section */
+.card-metadata {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-gray);
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.metadata-label {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+.metadata-value {
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .card-detail-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .card-detail-table {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .card-detail-table {
+    min-width: 800px;
+  }
+  
+  .card-metadata {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-sm {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Button variants */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.8);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+
+.btn-success:hover {
+  background-color: rgba(var(--color-success-rgb), 0.8);
+}
+
+.btn-danger {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn-danger:hover {
+  background-color: rgba(var(--color-error-rgb), 0.8);
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #212121;
+}
+
+.btn-warning:hover {
+  background-color: rgba(255, 193, 7, 0.8);
+} 

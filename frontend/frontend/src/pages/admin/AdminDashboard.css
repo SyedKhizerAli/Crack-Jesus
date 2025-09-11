@@ -1,0 +1,221 @@
+.dashboard-container {
+  padding: var(--spacing-md) 0;
+}
+
+.dashboard-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard-subtitle {
+  color: var(--color-light-gray);
+  margin-top: var(--spacing-xs);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.dashboard-card {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-header h2 {
+  font-size: var(--font-size-medium);
+  margin-bottom: 0;
+}
+
+.view-all {
+  font-size: var(--font-size-small);
+  color: var(--color-accent);
+}
+
+/* System Stats Card */
+.system-stats {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.stat-item {
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+/* Pending Tickets Card */
+.pending-tickets {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.ticket-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.ticket-count {
+  font-size: var(--font-size-xxlarge);
+  font-weight: 700;
+}
+
+.ticket-label {
+  color: var(--color-light-gray);
+  margin-top: var(--spacing-xs);
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+}
+
+/* Recent Activity Card */
+.recent-activity {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-gray);
+  border-radius: 50%;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-message {
+  margin-bottom: var(--spacing-xs);
+}
+
+.activity-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+/* Quick Actions Card */
+.quick-actions {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.action-item {
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.action-item:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-accent);
+}
+
+.action-icon {
+  font-size: 24px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.action-label {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+.no-data {
+  color: var(--color-light-gray);
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .system-stats,
+  .pending-tickets,
+  .recent-activity,
+  .quick-actions {
+    grid-column: 1;
+  }
+  
+  .pending-tickets {
+    grid-row: 2;
+  }
+  
+  .quick-actions {
+    grid-row: 3;
+  }
+  
+  .recent-activity {
+    grid-row: 4;
+  }
+} 

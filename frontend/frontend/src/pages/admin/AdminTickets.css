@@ -1,0 +1,131 @@
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.ticket-card {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.ticket-header {
+  background-color: var(--color-gray);
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.ticket-title h3 {
+  margin: 0;
+  font-size: var(--font-size-medium);
+}
+
+.ticket-body {
+  padding: var(--spacing-md);
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.user-label {
+  color: var(--color-light-gray);
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.ticket-message {
+  margin-bottom: var(--spacing-md);
+  white-space: pre-line;
+}
+
+.ticket-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+.ticket-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-gray);
+  display: flex;
+  justify-content: space-between;
+}
+
+.role-badge,
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-user {
+  background-color: rgba(3, 169, 244, 0.1);
+  color: #03a9f4;
+}
+
+.role-vendor {
+  background-color: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.status-open {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: var(--color-success);
+}
+
+.status-in_progress {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status-resolved {
+  background-color: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.status-closed {
+  background-color: rgba(207, 102, 121, 0.1);
+  color: var(--color-error);
+}
+
+@media (max-width: 768px) {
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .ticket-meta {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .ticket-footer {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .ticket-footer .btn {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,119 @@
+.profile-container {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.profile-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.profile-section {
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: var(--spacing-lg);
+}
+
+.profile-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.profile-section h2 {
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-field:last-child {
+  margin-bottom: 0;
+}
+
+.field-label {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+  margin-bottom: var(--spacing-xs);
+}
+
+.field-value {
+  font-weight: 500;
+}
+
+.field-value.description {
+  white-space: pre-line;
+  font-weight: normal;
+}
+
+.success-message {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: var(--color-success);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.vacation-mode-toggle {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.vacation-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.vacation-title h2 {
+  margin: 0;
+}
+
+.vacation-status {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+}
+
+.vacation-status.active {
+  background-color: rgba(255, 153, 0, 0.15);
+  color: var(--color-warning);
+}
+
+.vacation-status.inactive {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: var(--color-success);
+}
+
+.vacation-description {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-light-gray);
+}
+
+@media (max-width: 768px) {
+  .profile-field {
+    flex-direction: column;
+  }
+  
+  .vacation-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+} 

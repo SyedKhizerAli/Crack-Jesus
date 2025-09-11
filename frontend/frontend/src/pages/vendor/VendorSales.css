@@ -1,0 +1,77 @@
+.sales-summary-card {
+  display: flex;
+  gap: var(--spacing-xl);
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.summary-label {
+  font-size: var(--font-size-small);
+  color: var(--color-light-gray);
+}
+
+.summary-value {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+}
+
+.sales-table-container {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  overflow-x: auto;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.sales-table th {
+  font-weight: 600;
+  color: var(--color-light-gray);
+}
+
+.amount-cell {
+  font-weight: 500;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-small);
+}
+
+@media (max-width: 992px) {
+  .sales-summary-card {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .sales-table th:nth-child(3),
+  .sales-table td:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sales-table th:nth-child(2),
+  .sales-table td:nth-child(2) {
+    display: none;
+  }
+} 

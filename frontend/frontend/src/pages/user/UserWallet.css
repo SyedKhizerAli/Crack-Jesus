@@ -1,0 +1,128 @@
+.wallet-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.wallet-balance-card {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.wallet-balance-card h2 {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-medium);
+}
+
+.balance-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.currency {
+  font-size: var(--font-size-large);
+  margin-right: var(--spacing-xs);
+  color: var(--color-light-gray);
+}
+
+.amount {
+  font-size: var(--font-size-xxlarge);
+  font-weight: 600;
+}
+
+.balance-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.transactions-section {
+  background-color: var(--color-dark-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+  font-size: var(--font-size-medium);
+  margin-bottom: 0;
+}
+
+.transactions-table-container {
+  overflow-x: auto;
+  margin-bottom: var(--spacing-lg);
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.transactions-table th {
+  font-weight: 600;
+  color: var(--color-light-gray);
+}
+
+.transaction-type {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-small);
+  background-color: var(--color-gray);
+}
+
+.transaction-type.deposit,
+.transaction-type.refund {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: var(--color-success);
+}
+
+.transaction-type.withdrawal,
+.transaction-type.purchase {
+  background-color: rgba(207, 102, 121, 0.1);
+  color: var(--color-error);
+}
+
+.transaction-amount.positive {
+  color: var(--color-success);
+}
+
+.transaction-amount.negative {
+  color: var(--color-error);
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .balance-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .balance-actions .btn {
+    width: 100%;
+  }
+} 
