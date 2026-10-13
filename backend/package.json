@@ -26,9 +26,14 @@
     "express": "^4.21.2",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.4"
+    "mongoose": "^8.9.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "overrides": {
+    "form-data": "4.0.4",
+    "tar": "7.5.19",
+    "proxy-addr": "2.0.8"
   }
 }
