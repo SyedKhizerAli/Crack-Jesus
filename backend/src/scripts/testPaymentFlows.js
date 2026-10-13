@@ -11,7 +11,7 @@ const Sale = require('../models/sale');
 const BASE_URL = 'http://localhost:3001';
 const BTCPAY_CONFIG = {
     baseUrl: 'https://testnet.demo.btcpayserver.org',
-    apiKey: 'oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr',
+    apiKey: process.env.BTCPAY_API_KEY,
     storeId: process.env.BTCPAY_STORE_ID || 'your_test_store_id_here'
 };
 

@@ -26,21 +26,29 @@ exports.updateSettings = async (req, res) => {
     try {
         const userId = req.user.id;
         const updateData = req.body;
-        
-        // Add timestamp and updater
-        updateData.updatedAt = new Date();
-        updateData.updatedBy = userId;
-        
+
+        // Fields that must never be set from client-supplied data
+        const disallowedKeys = new Set(['__proto__', 'constructor', 'prototype', '_id', '__v', 'updatedAt', 'updatedBy']);
+
         // Get the singleton settings document
         const settings = await SiteSettings.getSettings();
-        
-        // Update settings with new values
+
+        // Update settings with new values, allow-listing only known schema
+        // fields and rejecting prototype-pollution / internal-field keys
         Object.keys(updateData).forEach(key => {
-            if (key in settings.schema.paths) {
-                settings[key] = updateData[key];
+            if (
+                disallowedKeys.has(key) ||
+                !Object.prototype.hasOwnProperty.call(settings.schema.paths, key)
+            ) {
+                return;
             }
+            settings[key] = updateData[key];
         });
-        
+
+        // Add timestamp and updater after the allow-listed assignment
+        settings.updatedAt = new Date();
+        settings.updatedBy = userId;
+
         await settings.save();
         
         res.status(200).json({

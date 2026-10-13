@@ -9,7 +9,7 @@ if [ ! -f .env ]; then
     echo "📝 Creating .env file..."
     cat > .env << EOF
 # MongoDB Configuration
-MONGODB_URI=mongodb+srv://salirazahussnain:4sKgKu90TulBmQVV@cluster0.vaq2i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.vaq2i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 # Server Configuration
 PORT=3001
@@ -17,7 +17,7 @@ NODE_ENV=development
 
 # BTCPayServer Testnet Configuration
 BTCPAY_URL=https://testnet.demo.btcpayserver.org
-BTCPAY_API_KEY=oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr
+BTCPAY_API_KEY=your_btcpay_api_key_here
 BTCPAY_STORE_ID=your_test_store_id_here
 
 # Application Configuration
@@ -49,5 +49,5 @@ echo "3. Run: npm run test-payments"
 echo "4. Start the server: npm start"
 echo ""
 echo "🔗 BTCPayServer Testnet URL: https://testnet.demo.btcpayserver.org"
-echo "🔑 API Key: oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr"
+echo "🔑 API Key: see .env (never print real secrets)"
 

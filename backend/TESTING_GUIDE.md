@@ -17,7 +17,7 @@ This will create a `.env` file with the following configuration:
 ```env
 # BTCPayServer Testnet Configuration
 BTCPAY_URL=https://testnet.demo.btcpayserver.org
-BTCPAY_API_KEY=oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr
+BTCPAY_API_KEY=your_btcpay_api_key_here
 BTCPAY_STORE_ID=your_test_store_id_here
 ```
 
@@ -85,11 +85,11 @@ You can test the BTCPayServer API directly using curl:
 ```bash
 # Test store verification
 curl -X GET "https://testnet.demo.btcpayserver.org/api/v1/stores/YOUR_STORE_ID" \
-  -H "Authorization: token oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr"
+  -H "Authorization: token YOUR_BTCPAY_API_KEY"
 
 # Create a test invoice
 curl -X POST "https://testnet.demo.btcpayserver.org/api/v1/stores/YOUR_STORE_ID/invoices" \
-  -H "Authorization: token oiOoh7VlOHCloDpQL7Coi0OdUI7Wk0d7RbyLQhpvbvr" \
+  -H "Authorization: token YOUR_BTCPAY_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "amount": 0.001,
@@ -208,7 +208,7 @@ The test scripts create the following test data:
 ## 🔐 Security Notes
 
 - The testnet environment uses test Bitcoin (no real value)
-- API keys in testnet are safe to share
+- Never commit real API keys or secrets to source control; use environment variables and a secrets manager
 - All transactions are simulated
 - No real financial data is processed
 
